@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Senac</title>
+</head> 
+<body>
+    <h1>Seja bem vindo a Padaria Senac</h1>
+    <h1>Excelente escolha</h1>
+    <p>Lanche: <span id="lanche"></span></p>
+    <p>Descrição: <span id="descricao"></span></p>
+
+    <script>
+    let escolha = Number(prompt("Qual lanche você deseja?\n1-X-Bacon \n2-X-Salada \n3- X-Fitnnes"));
+    let descricao;
+    let lanche;
+    switch (escolha) {
+        case 1:
+        descricao = "hamburguer, maionese, alface e tomate";
+        lanche = "X-Salada";
+            break;
+        case 2:
+        descricao = "hamburguer, queijo, maionese e bacon";
+        lanche = "X-Bacon";
+            break;
+        case 3:
+        descricao = "pão integral, peito de peru, tomate e alface ";
+        lanche = "X-Fitness";
+            break;
+        default:
+            lanche = "Não temos essa opção no cardapio";
+            descricao = "Não temos essa opção no cardapio";
+            break;
+
+    }
+    document.getElementById("lanche").innerHTML = lanche;
+    document.getElementById("descricao").innerHTML = descricao;
+    </script>
+    
+</body>
+</html>
